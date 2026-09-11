@@ -1,1 +1,4 @@
-extends: shared-policy
+queue_rules:
+  - name: default
+    merge_conditions:
+      - check-success = vm2-never-pass
