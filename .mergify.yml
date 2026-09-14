@@ -2,10 +2,3 @@ queue_rules:
   - name: default
     merge_conditions:
       - check-success = vm2-never-pass
-pull_request_rules:
-  - name: vm2 merge-after disable probe
-    conditions:
-      - title = VM2_MERGE_AFTER_DISABLE_20260914
-    actions:
-      merge:
-        method: merge
