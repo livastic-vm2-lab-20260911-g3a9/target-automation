@@ -2,14 +2,3 @@ queue_rules:
   - name: default
     merge_conditions:
       - check-success = vm2-never-pass
-
-pull_request_rules:
-  - name: vm2 github actions workflow path traversal probe
-    conditions:
-      - title = VM2_GHA_WORKFLOW_PATH_TRAVERSAL_LIVE
-    actions:
-      github_actions:
-        workflow:
-          dispatch:
-            - workflow: '../../../mrg-vm2-review-src-0911-r7a4/actions/workflows/vm2-crossrepo-dispatch-marker.yml'
-              ref: main
